@@ -11,8 +11,8 @@ int main(){
     //int b=10,c=20;
     //cout<<b+c;
 
-    for( int i=1;i<=5;i++){
-        for(int j=1;j<i+1;j++){
+    for( int i=0;i<5;i++){
+        for(int j=1;j<=i+1;j++){
             cout<<j;
         }
         cout<<endl;
