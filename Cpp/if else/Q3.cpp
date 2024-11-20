@@ -3,6 +3,8 @@ using namespace std;
 
 int main()
 {
+    // AVERAGE MARKS
+
     float math, eng, sci, total;
     cout << "Enter maths marks : ";
     cin >> math;
