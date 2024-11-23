@@ -99,6 +99,7 @@ int main(){
         break;
 
         case 0:
+        cout<<"You have successfully EXIT ...";
         break;
 
         default :
