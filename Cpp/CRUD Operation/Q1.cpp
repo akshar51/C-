@@ -33,8 +33,9 @@ int main(){
         cout<<endl;
 
         switch(choice){
+        // INSERT
         case 1:
-        cout<<"Enter your index value : ";
+        cout<<"Enter your index value for insert : ";
         cin>>pos;
         cout<<"Enter your element value : ";
         cin>>elem;
@@ -43,8 +44,10 @@ int main(){
             ar[i+1]=ar[i];
         }
         ar[pos]=elem;
+        cout<<endl;
         break;
 
+        // SHOW
         case 2:
         cout<<"Array element is : ";
         for(int i=0;i<size;i++){
@@ -53,10 +56,37 @@ int main(){
         cout<<endl<<endl;
         break;
 
+        // UPDATE
         case 3:
+        cout<<"Enter your position value for update : ";
+        cin>>pos;
+        cout<<"Enter your element value : ";
+        cin>>elem;
+
+        if(pos>=size+1){
+            cout<<"Enter valid position... ";
+        }
+        else{
+            for(int i=1;i<=size;i++){
+                if(i == pos){
+                    ar[i-1]=elem;
+                }
+            }
+        }
+        cout<<endl;
         break;
 
+        // DELETE
         case 4:
+        cout<<"Enter your position value to delete : ";
+        cin>>pos;
+        cout<<"Enter your element value : ";
+        cin>>elem;
+
+       for(int i=0;i<size;i++){
+        
+       }
+        
         break;
 
         case 0:
