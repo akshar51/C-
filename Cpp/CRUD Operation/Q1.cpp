@@ -39,9 +39,15 @@ int main(){
         cin>>pos;
         cout<<"Enter your element value : ";
         cin>>elem;
+
+        if(pos<0){
+            cout<<"Enter valid index value..."<<endl;
+        }
+        else{
         size++;
         for(int i=size-1;i>=pos;i--){
             ar[i+1]=ar[i];
+        }
         }
         ar[pos]=elem;
         cout<<endl;
@@ -64,7 +70,7 @@ int main(){
         cin>>elem;
 
         if(pos>=size+1){
-            cout<<"Enter valid position... ";
+            cout<<"Enter valid position... "<<endl;
         }
         else{
             for(int i=1;i<=size;i++){
@@ -80,22 +86,23 @@ int main(){
         case 4:
         cout<<"Enter your position value to delete : ";
         cin>>pos;
-        cout<<"Enter your element value : ";
-        cin>>elem;
-
-       for(int i=0;i<size;i++){
-        
-       }
-        
+        if(pos>=size+1){
+            cout<<"Enter valid position..."<<endl;
+        }
+        else{
+            for(int i=pos-1;i<size-1;i++){
+                ar[i]=ar[i+1]; 
+            }
+        size--;
+        }
+        cout<<endl;
         break;
 
         case 0:
         break;
 
         default :
-        cout<<"Enter valid choice....";
-        
-
+        cout<<"Enter valid choice...."<<endl<<endl;
     }
     }while(choice != 0);
 
