@@ -3,7 +3,6 @@ using namespace std;
 
 int main(){
     int size,i;
-    float total;
     cout<<"Enter array size : ";
     cin>>size;
     int ar1[size];
