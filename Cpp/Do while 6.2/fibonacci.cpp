@@ -8,8 +8,10 @@ int main(){
     cin>>num;
 
     cout<<a<<" "<<b<<" ";
-    for(i=1;i<=num;i++){
+    for(i=3;i<=num;i++){
         fib=a+b;
         cout<<fib<<" ";
+        a=b;
+        b=fib;
     }
 }
