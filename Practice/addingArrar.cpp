@@ -37,7 +37,7 @@ int main(){
                 }
             }
         }
-        for(j=ele+1;j>=ind;j--){
+        for(j=ele*2;j>ind;j--){
                     cout<<"a["<<j<<"] = ";
                     cin>>a[j];
         }
@@ -58,5 +58,5 @@ int main(){
     //     }
     // }
 
-   
+   return 0;
 }
