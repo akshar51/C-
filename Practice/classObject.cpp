@@ -2,8 +2,6 @@
 #include<string.h>
 using namespace std;
 
-
-
 class Student{
     public:
     int roll;
@@ -12,6 +10,7 @@ class Student{
 };
 
 int main(){
+    int num,i;
     Student stu1,stu2;
     stu1.roll=99;
     strcpy(stu1.name,"Akshar");
@@ -29,4 +28,14 @@ int main(){
     cout<<"Roll number is : "<<stu1.roll<<endl;
     
 
+    for(int i=1;i<5;i++){
+        cout<<"stu["<<i.roll<<"] = ";
+        cin>>num;
+
+    }
+
 }
+
+
+
+
