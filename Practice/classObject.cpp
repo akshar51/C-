@@ -28,11 +28,7 @@ int main(){
     cout<<"Roll number is : "<<stu1.roll<<endl;
     
 
-    for(int i=1;i<5;i++){
-        cout<<"stu["<<i.roll<<"] = ";
-        cin>>num;
-
-    }
+  
 
 }
 

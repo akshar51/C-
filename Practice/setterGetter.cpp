@@ -62,7 +62,5 @@ int main(){
    Bank bal;
    bal.code(123);
 
-   
-
 
 }
