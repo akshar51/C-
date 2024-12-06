@@ -3,30 +3,46 @@
 using namespace std;
 
 
-int x=100;
 
-// class Student{
-//    public:
-//     int roll;
-//     string name;
-//     int age;
+
+class Student{
+   public:
+    static int roll;
+    string name;
+    int age;
 
     
-//     void setdata(){
-//         cout<<"Roll no:";
-//         cin>>roll;
-//         cout<<"Name:";
-//         cin>>name;
-//         cout<<"Age:";
-//         cin>>age;
-//     }
+    // void setdata(){
+    //     cout<<"Roll no:";
+    //     cin>>roll;
+    //     cout<<"Name:";
+    //     cin>>name;
+    //     cout<<"Age:";
+    //     cin>>age;
+    // }
 
-//     void getdata(){
-//         cout<<"Roll:"<<roll<<" "
-//             <<"Name:"<<name<<" "
-//             <<"Age:"<<age<<endl;
-//     }
+    // void getdata(){
+    //     cout<<"Roll:"<<roll<<" "
+    //         <<"Name:"<<name<<" "
+    //         <<"Age:"<<age<<endl;
+    // }
+
+    static void getdata(){
+        static int roll=55;
+        cout<<roll<<endl;
+    }
+
+
+   
+};
+
+// class Myclass{
+//     public:
+//     static char name[50];
 // };
+
+// char Myclass::name[50]="akshar";
+
 
 
 int main(){
@@ -44,7 +60,20 @@ int main(){
        
     // }
 
-    int x=50;
-    cout<<"Global x = "<<::x<<endl;
-    cout<<"Local x = "<<x<<endl;
+    // int x=50;
+    // cout<<"Global x = "<<::x<<endl;
+    // cout<<"Local x = "<<x<<endl;
+
+    // cout<<Myclass::name<<endl;
+    // cout<<Myclass::name<<endl;
+ 
+    Student::getdata();
+
+    // ::getdata();
+
+
+
+
+
+
 }
