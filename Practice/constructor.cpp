@@ -19,7 +19,8 @@ class City{
 
     //COPY CONSTRUCTOR
     City(City &obj){
-        
+        this->id=7;
+        cout<<"ID is : "<<this->id<<endl;
     }
 
     // //DESTRUCTOR
@@ -32,5 +33,9 @@ class City{
 int main(){
     City c1;
     City c2(3);
-    City c3(c2);
+    City c3=c2;
+    City c4(c3);
+
+    cout<<c4.id<<endl;
+    cout<<c2.id<<endl;
 }
