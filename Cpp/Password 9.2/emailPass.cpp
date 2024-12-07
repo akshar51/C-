@@ -30,8 +30,8 @@ int main(){
                 ct++;
             } 
     }
-    cout<<sm<<endl;
-    cout<<spch<<endl;
+    // cout<<sm<<endl;
+    // cout<<spch<<endl;
 
     if(sm<=3  || spch==0){
         cout<<"Login failed...";
