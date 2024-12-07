@@ -4,8 +4,8 @@
 using namespace std;
 
 int main(){
-    int i,j,count=0,ans;
-    char pass[50]="Admin@123";
+    int i,j,alp=0,smalp=0,num=0,spch=0,ct=0;
+    char pass[50]="1DDAzD@A";
     int length=strlen(pass);
     // cout<<length;
 
@@ -15,28 +15,29 @@ int main(){
     else{
         for(i=0;i<length;i++){
             if(pass[i]>='A' && pass[i]<='Z'){
-                count++;
+                alp++;
             }
             else if(pass[i]>='a' && pass[i]<='z'){
-                count++;
+                smalp++;
             }
-            else if(pass[i]>=1 && pass[i]<=9){
-                count++;
+            else if(pass[i]>=49 && pass[i]<=57){
+                num++;
             }
-            else if(pass[i]=='@'){
-                count++;
+            else if(pass[i]==64){
+                spch++;
             }
             else{
-                count=0;
+                ct=0;
             } 
         }
     }
+   
 
-    if(count>0){
-        cout<<"Your password is not strong...";
+    if(alp!=0 && smalp!=0 && num!=0 && spch!=0){
+        cout<<"Your password is strong...";
     }
     else{
-        cout<<"Your password is strong...";
+        cout<<"Not strong password...";
     }
     
 }
