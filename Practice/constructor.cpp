@@ -24,9 +24,9 @@ class City{
     }
 
     // //DESTRUCTOR
-    // ~City(){
-    //     cout<<"Object is destroyed...."<<endl;
-    // }
+    ~City(){
+        cout<<"Object is destroyed...."<<endl;
+    }
 };
 
 
