@@ -41,22 +41,49 @@ using namespace std;
 
 
 //MULTIPLE INHERITANCE
-class Engine{
-    public:
-    char engine_name[50]="VB";
-};
+// class Engine{
+//     public:
+//     char engine_name[50]="VB";
+// };
 
-class wheel{
-    public:
-    char wheel_name[50]="MRF";
-};
+// class wheel{
+//     public:
+//     char wheel_name[50]="MRF";
+// };
 
-class car : public Engine , public wheel{
+// class car : public Engine , public wheel{
+//     public:
+//     void make(){
+//         cout<<"A new car is prepare with engine "<<engine_name<<" and wheel is of "<<wheel_name<<endl;
+//     }
+// };
+
+
+//HIERARCHICAL INHERITANCE
+class Animal{
     public:
-    void make(){
-        cout<<"A new car is prepare with engine "<<engine_name<<" and wheel is of "<<wheel_name<<endl;
+    void eat(){
+        cout<<"Tiger is eating"<<endl;
     }
 };
+
+class tiger: public Animal{
+    public:
+    void sleep(){
+        cout<<"Tiger is sleeping"<<endl;
+    }
+};
+
+class lion:public Animal{
+    public:
+    void sleep(){
+        cout<<"Lion is sleeping"<<endl;
+    }
+};
+
+
+
+
 
 int main(){
     //SINGLE INHERITANCE
@@ -75,5 +102,15 @@ int main(){
     //MULTIPLE INHERITANCE
     // car A;
     // A.make();
+
+
+    //HIERARCHICAL INHERITANCE
+    lion c;
+    tiger t;
     
+    c.eat();
+    t.eat();
+    
+    c.sleep();
+    t.sleep();
 }
