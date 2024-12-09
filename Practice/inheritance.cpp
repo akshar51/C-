@@ -2,7 +2,6 @@
 using namespace std;
 
 //SINGLE INHERITANCE
-
 // class Animal{
 //     public:
 //     void eat(){
@@ -17,34 +16,54 @@ using namespace std;
 //     }
 // };
 
+
 //MULTI-LEVEL INHERITANCE
-class Animal{
+// class Animal{
+//     public:
+//     void eat(){
+//         cout<<"Animal is eating"<<endl;
+//     }
+// };
+
+// class Dog:public Animal{
+//     public:
+//     void sleep(){
+//         cout<<"Dog is sleeping"<<endl;
+//     }
+// };
+
+// class Pitbull:public Dog{
+//     public:
+//     void bark(){
+//         cout<<"Pitbull is barking"<<endl;
+//     }
+// };
+
+
+//MULTIPLE INHERITANCE
+class Engine{
     public:
-    void eat(){
-        cout<<"Animal is eating"<<endl;
-    }
+    char engine_name[50]="VB";
 };
 
-class Dog:public Animal{
+class wheel{
     public:
-    void sleep(){
-        cout<<"Dog is sleeping"<<endl;
-    }
+    char wheel_name[50]="MRF";
 };
 
-class Pitbull:public Dog{
+class car : public Engine , public wheel{
     public:
-    void bark(){
-        cout<<"Pitbull is barking"<<endl;
+    void make(){
+        cout<<"A new car is prepare with engine "<<engine_name<<" and wheel is of "<<wheel_name<<endl;
     }
 };
 
 int main(){
     //SINGLE INHERITANCE
-
     // tiger A;
     // A.eat();
     // A.sleep();
+
 
     //MULTI-LEVEL INHERITANCE
     // Pitbull A;
@@ -52,7 +71,9 @@ int main(){
     // A.sleep();
     // A.bark();
 
-    //MULTIPLE INHERITANCE
-    
 
+    //MULTIPLE INHERITANCE
+    // car A;
+    // A.make();
+    
 }
