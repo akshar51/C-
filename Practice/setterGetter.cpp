@@ -9,14 +9,14 @@ class Student{
     int age;
 
     public:
-    //Setter
+    //Setter //WORK AS INPUT
     void setdata(int grid,string name,int age){
-        this->grid=grid;
+        this->grid=grid;//Same variable and parameter name so used 'this->'
         this->name=name;
         this->age=age;
     }
 
-    //Getter
+    //Getter //WORK AS OUTPUT
     void getdata(){
         cout<<"Grid: "<<grid<<" "
             <<"Name: "<<name<<" "
