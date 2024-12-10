@@ -48,11 +48,12 @@ int main(){
     //METHOD OVER-RIDING
     // Pak a;
     // a.wear();
-   India *a;
-   India a1;
-   Pak a2; 
-   a=&a1;
-   a->wear();
-   a2.wear();
+//    India *a;
+//    India a1;
+//    Pak *b;
+//    Pak b2; 
+//    a=&b2;
+//    a->wear();
+//    b2.wear();
 
 }
