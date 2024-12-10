@@ -24,7 +24,7 @@ using namespace std;
 //METHOD OVER-RIDING
 class India{
     public:
-    void wear(){
+    virtual void wear(){
         cout<<"Dhoti"<<endl;
     }
 };
@@ -38,14 +38,16 @@ class Pak : public India{
 
 
 int main(){
+    // METHOD OVERLOADING
     // animal a;
     // a.lion();
     // a.lion(4);
     // a.lion(4,2);
 
+
+    //METHOD OVER-RIDING
     // Pak a;
     // a.wear();
-   
    India *a;
    India a1;
    Pak a2; 
