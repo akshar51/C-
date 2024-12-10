@@ -60,27 +60,57 @@ using namespace std;
 
 
 //HIERARCHICAL INHERITANCE
-class Animal{
+// class Animal{
+//     public:
+//     void eat(){
+//         cout<<"Tiger is eating"<<endl;
+//     }
+// };
+
+// class tiger: public Animal{
+//     public:
+//     void sleep(){
+//         cout<<"Tiger is sleeping"<<endl;
+//     }
+// };
+
+// class lion:public Animal{
+//     public:
+//     void sleep(){
+//         cout<<"Lion is sleeping"<<endl;
+//     }
+// };
+
+
+//HYBRID INHERITANCE
+
+class A{
     public:
-    void eat(){
+    void tiger(){
         cout<<"Tiger is eating"<<endl;
     }
 };
 
-class tiger: public Animal{
+class B : public A{
     public:
-    void sleep(){
-        cout<<"Tiger is sleeping"<<endl;
+    void lion(){
+        cout<<"lion is eating"<<endl;
     }
 };
 
-class lion:public Animal{
+class C : public A{
     public:
-    void sleep(){
-        cout<<"Lion is sleeping"<<endl;
+    void cheetah(){
+        cout<<"Cheetah is eating"<<endl;
     }
 };
 
+class D : public B,public C{
+    public:
+    void leopard(){
+        cout<<"Leopard is eating"<<endl;
+    }
+};
 
 
 
@@ -105,12 +135,19 @@ int main(){
 
 
     //HIERARCHICAL INHERITANCE
-    lion c;
-    tiger t;
+    // lion c;
+    // tiger t;
     
-    c.eat();
-    t.eat();
+    // c.eat();
+    // t.eat();
     
-    c.sleep();
-    t.sleep();
+    // c.sleep();
+    // t.sleep();
+
+    //HYBRID INHERITANCE
+    D a;
+    a.C::tiger();
+    a.B::tiger();
+    a.cheetah();
+    a.lion();
 }
