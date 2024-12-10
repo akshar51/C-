@@ -83,34 +83,33 @@ using namespace std;
 
 
 //HYBRID INHERITANCE
+// class A{
+//     public:
+//     void tiger(){
+//         cout<<"Tiger is eating"<<endl;
+//     }
+// };
 
-class A{
-    public:
-    void tiger(){
-        cout<<"Tiger is eating"<<endl;
-    }
-};
+// class B : public A{
+//     public:
+//     void lion(){
+//         cout<<"lion is eating"<<endl;
+//     }
+// };
 
-class B : public A{
-    public:
-    void lion(){
-        cout<<"lion is eating"<<endl;
-    }
-};
+// class C : public A{
+//     public:
+//     void cheetah(){
+//         cout<<"Cheetah is eating"<<endl;
+//     }
+// };
 
-class C : public A{
-    public:
-    void cheetah(){
-        cout<<"Cheetah is eating"<<endl;
-    }
-};
-
-class D : public B,public C{
-    public:
-    void leopard(){
-        cout<<"Leopard is eating"<<endl;
-    }
-};
+// class D : public B,public C{
+//     public:
+//     void leopard(){
+//         cout<<"Leopard is eating"<<endl;
+//     }
+// };
 
 
 
@@ -145,9 +144,9 @@ int main(){
     // t.sleep();
 
     //HYBRID INHERITANCE
-    D a;
-    a.C::tiger();
-    a.B::tiger();
-    a.cheetah();
-    a.lion();
+    // D a;
+    // a.C::tiger();
+    // a.B::tiger();
+    // a.cheetah();
+    // a.lion();
 }
