@@ -29,9 +29,6 @@ class B : public A{
 
 class C : public B{
     public:
-    void sidephone(){
-        cout<<"Sidephone"<<endl;
-    }
     void movephone(){
         cout<<"phone"<<endl;
     }
