@@ -5,10 +5,12 @@ using namespace std;
 // ABSTRACT CLASS AND PURE VIRTUAL FUNCTION
 class A{
     public:
+
     // PURE VIRTUAL FUNCTON
     virtual void movephone()=0; 
     virtual void sidephone()=0; 
 
+    // CONCRETE METHOD
     void calling(){
         cout<<"Calling"<<endl;
     }
@@ -30,9 +32,9 @@ class C : public B{
     void sidephone(){
         cout<<"Sidephone"<<endl;
     }
-    // void movephone(){
-    //     cout<<"phone"<<endl;
-    // }
+    void movephone(){
+        cout<<"phone"<<endl;
+    }
 };
 
 
@@ -44,6 +46,10 @@ int main(){
     a.calling();
     a.movephone();
     a.sidephone();
+
+
+   
+
 
 
 }
