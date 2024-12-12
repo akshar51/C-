@@ -64,10 +64,10 @@ int main(){
     // a.sidephone();
 
 
-    Vehicle* a;
-    Car b;
-    Bike c;
-    a=&c;
+    Vehicle* a;//Parent pointer
+    Car b;//Child 
+    Bike c;//Child
+    a=&c;//Child into Parent pointer
     a->show();
     b.show();
 
