@@ -11,6 +11,9 @@ class Myclass{
   Myclass(int size){
     this->size=size;
     arr=new int[size];
+    arr[0]=1;
+    arr[1]=2;
+    arr[2]=3;
     if(arr==NULL){
         cout<<"Allocation is failed"<<endl;
     }
@@ -34,7 +37,7 @@ class Myclass{
     //INSERTING ELEMENT ------------CRUD----------- 
     void addelement(int index,int ele){
         if(index>=0 && index<this->size){
-            arr[index]=ele;
+            this->arr[index]=ele;
             cout<<"Element added successfull"<<endl;
         }
         else{
@@ -58,10 +61,9 @@ class Myclass{
 
 int main(){
 
-    int arr[]={1,2,3,4};
-   // cout<<arr[0];
-    Myclass obj(5);
-    obj.addelement(4,99);
-    obj.getelement(0);
+   
+    Myclass obj(3);
+    obj.addelement(1,99);
+    obj.getelement(1);
 
 }
