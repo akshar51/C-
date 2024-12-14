@@ -149,7 +149,6 @@ using namespace std;
 //     setdata();
 //     getdata();
 //     }
-    
 // };
 
 int main(){
