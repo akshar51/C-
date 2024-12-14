@@ -24,6 +24,7 @@ using namespace std;
 // };
 
 // ----------------------------------------------
+
 // ARRAY OF OBJECT
 // class stud{
 //     public:
@@ -51,8 +52,8 @@ using namespace std;
 // string stud::name="DSA";
 
 //----------------------------------------------------
-//  CONSTRUCTOR AND DESTRUCTOR
 
+//  CONSTRUCTOR AND DESTRUCTOR
 // class A{
 //     public:
 //     int id;
@@ -90,7 +91,6 @@ using namespace std;
 //--------------------------------------------
 
 // INHERITANCE
-
 // SINGLE INHERITANCE
 // class Animal{
 //     public:
@@ -117,6 +117,7 @@ int main(){
     // a.getdata();
 
 //--------------------------------------------
+
     // ARRAY OF OBJECT
     // int size;
     // cout<<"Enter number of student : ";
@@ -133,7 +134,6 @@ int main(){
 //--------------------------------------------
 
     // CONSTRUCTOR & DESTRUCTOR
-
     // A ob;
     // A h(99,"Akskar");
     // cout<<h.id<<" ";
@@ -145,7 +145,6 @@ int main(){
 //-------------------------------------
 
 // INHERITANCE
-
 // SINGLE INHERITANCE
     // Pet a;
     // a.dog();
