@@ -171,6 +171,35 @@ using namespace std;
 //     }
 //  };
 
+// HYBRID INHERITANCE
+
+class A{
+    public:
+    void eleA(){
+        cout<<"Element of A."<<endl;
+    }
+};
+class B : public A{
+    public:
+    void ele(){
+        cout<<"Element of B."<<endl;
+    }
+};
+class C : public A{
+    public:
+    void ele(){
+        cout<<"Element of C."<<endl;
+    }
+};
+class D : public B, public C{
+    public:
+    void eleD(){
+        cout<<"Element of D."<<endl;
+    }
+};
+
+
+
 int main(){
 
     // SETTER AND GETTER
@@ -235,6 +264,14 @@ int main(){
 // c.dark();
 
 // HYBRID INHERITANCE
+// D d;
+// d.B::ele();//object.class name from needed::func name
+// d.C::ele();
 
+// B b;
+// b.eleA();
+
+// C c;
+// c.eleA();
 
 }
