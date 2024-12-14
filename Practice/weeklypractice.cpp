@@ -151,6 +151,26 @@ using namespace std;
 //     }
 // };
 
+//  HIERARCHICAL INHERITANCE
+//  class A{
+//     public:
+//     void dark(){
+//         cout<<"Theme is dark."<<endl;
+//     }
+//  };
+//  class B : public A{
+//     public:
+//     void light(){
+//         cout<<"Theme is light."<<endl;
+//     }
+//  };
+//  class C : public A{
+//     public:
+//     void none(){
+//         cout<<"Theme is none."<<endl;
+//     }
+//  };
+
 int main(){
 
     // SETTER AND GETTER
@@ -201,4 +221,20 @@ int main(){
 // MULTIPLE INHERITANCE
     // C a;
     // a.final();
+
+// HIERARCHICAL INHERITANCE
+// C a;
+// a.dark();
+// a.none();
+
+// B b;
+// b.light();
+// b.dark();
+
+// A c;
+// c.dark();
+
+// HYBRID INHERITANCE
+
+
 }
