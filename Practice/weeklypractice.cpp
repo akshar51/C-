@@ -172,31 +172,30 @@ using namespace std;
 //  };
 
 // HYBRID INHERITANCE
-
-class A{
-    public:
-    void eleA(){
-        cout<<"Element of A."<<endl;
-    }
-};
-class B : public A{
-    public:
-    void ele(){
-        cout<<"Element of B."<<endl;
-    }
-};
-class C : public A{
-    public:
-    void ele(){
-        cout<<"Element of C."<<endl;
-    }
-};
-class D : public B, public C{
-    public:
-    void eleD(){
-        cout<<"Element of D."<<endl;
-    }
-};
+// class A{
+//     public:
+//     void eleA(){
+//         cout<<"Element of A."<<endl;
+//     }
+// };
+// class B : public A{
+//     public:
+//     void ele(){
+//         cout<<"Element of B."<<endl;
+//     }
+// };
+// class C : public A{
+//     public:
+//     void ele(){
+//         cout<<"Element of C."<<endl;
+//     }
+// };
+// class D : public B, public C{
+//     public:
+//     void eleD(){
+//         cout<<"Element of D."<<endl;
+//     }
+// };
 
 
 
