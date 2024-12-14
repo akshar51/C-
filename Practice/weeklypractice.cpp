@@ -113,7 +113,6 @@ using namespace std;
 //         cout<<"A Dog is eating."<<endl;
 //     }
 //  };
-
 //  class B : public A{
 //     public:
 //     void sleep(){
@@ -128,7 +127,6 @@ using namespace std;
 //  };
 
 // MULTIPLE INHERITANCE
-
 // class A{
 //     public:
 //     void setdata(){
@@ -196,8 +194,22 @@ using namespace std;
 //         cout<<"Element of D."<<endl;
 //     }
 // };
+// -------------------------------------------------
 
-
+// POLYMORPHISM
+// METHOD OVERLOADING
+// class A{
+//     public:
+//     void truck(){
+//         cout<<"Truck 1"<<endl;
+//     }
+//     void truck(int n){
+//         cout<<"Truck 2"<<endl;
+//     }
+//      void truck(int n,int b){
+//         cout<<"Truck 3"<<endl;
+//     }
+// };
 
 int main(){
 
@@ -254,11 +266,9 @@ int main(){
 // C a;
 // a.dark();
 // a.none();
-
 // B b;
 // b.light();
 // b.dark();
-
 // A c;
 // c.dark();
 
@@ -266,11 +276,16 @@ int main(){
 // D d;
 // d.B::ele();//object.class name from needed::func name
 // d.C::ele();
-
 // B b;
 // b.eleA();
-
 // C c;
 // c.eleA();
+//-----------------------------------
 
+// POLYMORPHISM
+// METHOD OVERLOADING
+// A a;
+// a.truck(5);
+// a.truck();
+// a.truck(5,5);
 }
