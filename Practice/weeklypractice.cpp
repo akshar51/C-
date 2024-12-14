@@ -91,6 +91,7 @@ using namespace std;
 //--------------------------------------------
 
 // INHERITANCE
+
 // SINGLE INHERITANCE
 // class Animal{
 //     public:
@@ -104,10 +105,52 @@ using namespace std;
 //         cout<<"Pet is eating"<<endl;
 //     }
 // };
+    
+// MULTI-LEVEL INHERITANCE
+// class A{
+//     public:
+//     void eat(){
+//         cout<<"A Dog is eating."<<endl;
+//     }
+//  };
 
+//  class B : public A{
+//     public:
+//     void sleep(){
+//         cout<<"B Dog is sleeping."<<endl;
+//     }
+//  };
+//  class C : public B{
+//     public:
+//     void walk(){
+//         cout<<"C Dog is walking."<<endl;
+//     }
+//  };
 
+// MULTIPLE INHERITANCE
 
-
+// class A{
+//     public:
+//     void setdata(){
+//         string name;
+//         cout<<"Enter ur name : ";
+//         cin>>name;
+//     }
+// };
+// class B{
+//     public:
+//     void getdata(){
+//         cout<<"Input successfull.....";
+//     }
+// };
+// class C : public A , public B{
+//     public:
+//     void final(){
+//     setdata();
+//     getdata();
+//     }
+    
+// };
 
 int main(){
 
@@ -149,4 +192,14 @@ int main(){
     // Pet a;
     // a.dog();
     // a.eat();
+
+// MULTI-LEVEL INHERITANCE
+//     C a;
+//     a.eat();
+//     a.sleep();
+//     a.walk();
+
+// MULTIPLE INHERITANCE
+    // C a;
+    // a.final();
 }
