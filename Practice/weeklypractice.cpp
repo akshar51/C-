@@ -87,8 +87,23 @@ using namespace std;
 //         cout<<"Constructor deleted successfully...."<<endl;
 //     }   
 // };
+//--------------------------------------------
 
+// INHERITANCE
 
+// SINGLE INHERITANCE
+// class Animal{
+//     public:
+//     void dog(){
+//         cout<<"Dog is barking"<<endl;
+//     }
+// };
+// class Pet: public Animal{
+//     public:
+//     void eat(){
+//         cout<<"Pet is eating"<<endl;
+//     }
+// };
 
 
 
@@ -127,4 +142,12 @@ int main(){
     // h=A(h); // Object name = copy constructor name (object name)
     // cout<<h.id<<" ";
     // cout<<h.name<<endl;
+//-------------------------------------
+
+// INHERITANCE
+
+// SINGLE INHERITANCE
+    // Pet a;
+    // a.dog();
+    // a.eat();
 }
