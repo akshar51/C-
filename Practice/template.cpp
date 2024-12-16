@@ -15,7 +15,7 @@ class Pair{
     public:
     void set(int size){
         this->size=size;
-        arr = new T[size];
+        arr = new T[this->size];
         if ( arr != NULL){
             cout<<"Array is created successfully..."<<endl;
         }
@@ -25,15 +25,17 @@ class Pair{
     }
 
     void get(){
-        cout<<"Collection is : "<endl;
+        cout<<"Collection is : "<<endl;
         for(int i=0;i<size;i++){
-            cout<<arr[i]<<endl;
+            cout<<this->arr[i]<<endl;
         }
+
     }
 
-    void add(int index,T ele){
+    T add(int index,int ele){
         if(index>=0 && index<this->size){
             arr[index]=ele;
+            cout<<"Element added successfully....."<<endl;
         }
         else{
             cout<<"Error in index value...."<<endl;
@@ -47,5 +49,7 @@ int main(){
 
     Pair<int> a;
     a.set(5);
+    a.get();
+    a.add(0,99);
     return 0;
 }
