@@ -16,6 +16,10 @@ class Pair{
     void set(int size){
         this->size=size;
         arr = new T[this->size];
+        for(int i=0;i<size;i++){
+            arr[i]=0;
+        }
+        
         if ( arr != NULL){
             cout<<"Array is created successfully..."<<endl;
         }
@@ -29,7 +33,6 @@ class Pair{
         for(int i=0;i<size;i++){
             cout<<arr[i]<<endl;
         }
-
     }
 
     void add(int index,int ele){
