@@ -41,6 +41,28 @@ using namespace std;
 
 
 int main(){
+
+    // SYNTAX OF VECTOR
+
+    // SYNTAX 1
+    vector<int> v;// EMPTY VECTOR
+
+    // SYNTAX 2
+    // vector<data-type> vector-name(size,element)
+    vector<int> v1(5,99);//VECTOR WITH INITIALIZATION
+
+    // SYNTAX 3
+    vector<int> v2{10,20,30,40,50};
+
+    cout<<v2[0]<<endl;
+    cout<<v2[1]<<endl;
+    cout<<v2[2]<<endl;
+    cout<<v2[3]<<endl;
+    cout<<v2[4]<<endl;
+
+
+    // PROGRAM OF CRUD 
+
     // func a;
     // int index,ele,choice;
 
@@ -97,22 +119,6 @@ int main(){
     //     }
     // }while(choice!=0);
 
-    // SYNTAX OF VECTOR
-
-    // SYNTAX 1
-    vector<int> v;// EMPTY VECTOR
-
-    // SYNTAX 2
-    // vector<data-type> vector-name(size,element)
-    vector<int> v1(5,99);//VECTOR WITH INITIALIZATION
-
-    // SYNTAX 3
-    vector<int> v2{10,20,30,40,50};
-
-    cout<<v2[0]<<endl;
-    cout<<v2[1]<<endl;
-    cout<<v2[2]<<endl;
-    cout<<v2[3]<<endl;
-    cout<<v2[4]<<endl;
+    
 
 }
