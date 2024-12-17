@@ -27,12 +27,12 @@ class Pair{
     void get(){
         cout<<"Collection is : "<<endl;
         for(int i=0;i<size;i++){
-            cout<<this->arr[i]<<endl;
+            cout<<arr[i]<<endl;
         }
 
     }
 
-    T add(int index,int ele){
+    void add(int index,int ele){
         if(index>=0 && index<this->size){
             arr[index]=ele;
             cout<<"Element added successfully....."<<endl;
@@ -51,5 +51,7 @@ int main(){
     a.set(5);
     a.get();
     a.add(0,99);
+    a.add(1,99);
+    a.get();
     return 0;
 }
