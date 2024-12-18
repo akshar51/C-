@@ -26,28 +26,33 @@ int main(){
 
     //------------ PRINT SMALLEST VALUE FROM LEFT AND RIGHT -----------------
 
-    vector<int> v={2,-2,3,0,7,1,5};
-    vector<int> ans;
+    // vector<int> v={2,-2,3,0,7,1,5};
+    // vector<int> ans;
 
     
-    for(int i=0;i<v.size();i++){
-        cout<<v[i]<<" ";
-    }    
-    cout<<endl;
+    // for(int i=0;i<v.size();i++){
+    //     cout<<v[i]<<" ";
+    // }    
+    // cout<<endl;
 
-    for(int i=1;i<v.size()-1;i++){
-        if(v[i]<v[i-1] && v[i]<v[i+1]){
-            ans.push_back(v[i]);
-        }
-    }
+    // for(int i=1;i<v.size()-1;i++){
+    //     if(v[i]<v[i-1] && v[i]<v[i+1]){
+    //         ans.push_back(v[i]);
+    //     }
+    // }
 
-    cout<<"Smallest value is : ";
-    for(int i=0;i<ans.size();i++){
-        cout<<ans[i]<<" ";
-    }
+    // cout<<"Smallest value is : ";
+    // for(int i=0;i<ans.size();i++){
+    //     cout<<ans[i]<<" ";
+    // }
 
-
-
+    //------------------------ NxN MATRIX USING MATRIX -----------------
+    int n;
+    cout<<"Enter value : ";
+    cin>>n;
+    vector<int> v(n,n);
+    
+    
     
 
 
