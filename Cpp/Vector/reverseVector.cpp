@@ -51,7 +51,13 @@ int main(){
     cout<<"Enter value : ";
     cin>>n;
     vector<int> v(n,n);
-    
+    vector<vector<int>> v1(n,v);
+    for(vector<int> el:v1){
+        for(int b:el){
+            cout<<b<<" ";
+        }
+        cout<<endl;
+    }
     
     
 
