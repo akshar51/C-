@@ -4,26 +4,49 @@ using namespace std;
 
 int main(){
     // REVERSE OF VECTOR
+    // int size;
+    // cout<<"Enter vector size : ";
+    // cin>>size;
+    // vector<int> v(size);
+    // vector<int> ans(size);
+    // for(int i=0;i<v.size();i++){
+    //     cout<<"v["<<i<<"] = ";
+    //     cin>>v[i];
+    // }
+
+    // for(int i=0;i<v.size();i++){
+    //     ans[i]=v[size-1];
+    //     size--;
+    // }
+
+    // cout<<"Reverse of vector is : ";
+    // for(int i=0;i<ans.size();i++){
+    //     cout<<ans[i]<<" ";
+    // }
+
+    //------------ PRINT SMALLEST VALUE FROM LEFT AND RIGHT -----------------
+
+    vector<int> v={2,-2,3,0,7,1,5};
     vector<int> ans;
-    int size;
-    cout<<"Enter vector size : ";
-    cin>>size;
-    vector<int> v(size);
+
     
     for(int i=0;i<v.size();i++){
-        cout<<"v["<<i<<"] = ";
-        cin>>v[i];
+        cout<<v[i]<<" ";
+    }    
+    cout<<endl;
+
+    for(int i=1;i<v.size()-1;i++){
+        if(v[i]<v[i-1] && v[i]<v[i+1]){
+            ans.push_back(v[i]);
+        }
     }
 
-    for(int i=0;i<size-1;i++){
-        ans[i]=v[size-1];
-        size--;
-    }
-
-    cout<<"Reverse of vector is : ";
+    cout<<"Smallest value is : ";
     for(int i=0;i<ans.size();i++){
         cout<<ans[i]<<" ";
     }
+
+
 
     
 
