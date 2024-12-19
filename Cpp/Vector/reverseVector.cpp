@@ -58,9 +58,5 @@ int main(){
         }
         cout<<endl;
     }
-    
-    
-
-
-
+   
 }
