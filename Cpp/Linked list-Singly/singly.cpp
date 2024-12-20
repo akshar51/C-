@@ -31,7 +31,7 @@ int main(){
 
     a *temp=head;
 
-    
+
     cout<<"Address of head is "<<temp<<endl<<endl;
     cout<<"Data of node 1 is "<<head->data<<endl;
     cout<<"Address of node 1 is "<<head->next<<endl<<endl;
@@ -39,9 +39,10 @@ int main(){
     cout<<"Address of node 2 is "<<n2->next<<endl<<endl;
     cout<<"Data of node 3 is "<<n3->data<<endl;
     cout<<"Address of node 3 is "<<n3->next<<endl<<endl;
+    cout<<temp<<endl;// HEAD ADDRESS
     cout<<head<<endl;// NODE 1 ADDRESS
     cout<<n2<<endl;// NODE 2 ADDRESS
     cout<<n3<<endl;// NODE 3 ADDRESS
-    cout<<temp;// HEAD ADDRESS
+    
 
 }
