@@ -13,7 +13,7 @@ int main(){
     
 
     // STATIC WAY TO INITIALIZE LINKED LIST
-    a b;
+    
     a *head=NULL;
     head=new a();
     head->data=25;
@@ -29,15 +29,19 @@ int main(){
     n3->next=NULL;
     n2->next=n3;
 
+    a *temp=head;
 
+    
+    cout<<"Address of head is "<<temp<<endl<<endl;
     cout<<"Data of node 1 is "<<head->data<<endl;
-    cout<<"Address of node 1 is "<<head->next<<endl;
+    cout<<"Address of node 1 is "<<head->next<<endl<<endl;
     cout<<"Data of node 2 is "<<n2->data<<endl;
-    cout<<"Address of node 2 is "<<n2->next<<endl;
+    cout<<"Address of node 2 is "<<n2->next<<endl<<endl;
     cout<<"Data of node 3 is "<<n3->data<<endl;
-    cout<<"Address of node 3 is "<<n3->next<<endl;
-    cout<<head<<endl;
-    cout<<n2<<endl;
-    cout<<n3<<endl;
+    cout<<"Address of node 3 is "<<n3->next<<endl<<endl;
+    cout<<head<<endl;// NODE 1 ADDRESS
+    cout<<n2<<endl;// NODE 2 ADDRESS
+    cout<<n3<<endl;// NODE 3 ADDRESS
+    cout<<temp;// HEAD ADDRESS
 
 }
