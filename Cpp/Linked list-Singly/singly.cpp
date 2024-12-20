@@ -11,6 +11,8 @@ class a{
 
 int main(){
     
+
+    // STATIC WAY TO INITIALIZE LINKED LIST
     a *head=NULL;
     head=new a();
     head->data=25;
