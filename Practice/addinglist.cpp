@@ -5,7 +5,11 @@ class node{
     public:
     int data;
     node* next;
- 
+
+    node(int value){
+        data=value;
+        next=NULL;
+    }
 };
    
 node* createlink(int ar[],int index,int size){
