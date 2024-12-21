@@ -26,4 +26,10 @@ int main(){
     node *head=NULL;
     int ar[]={2,4,6};
     head=createlink(ar,0,3);
+
+    node *print=head;
+    while(print!=NULL){
+        cout<<print->data<<endl;
+        print=print->next;
+    }
 }
