@@ -22,13 +22,13 @@ int main(){
   
     Node *curr;
     curr=new Node();
-    head->data=50;
-    head->next=NULL;
+    curr->data=50;
+    curr->next=NULL;
     head->next=curr;
 
     curr=new Node();
-    head->data=75;
-    head->next=NULL;
+    curr->data=75;
+    curr->next=NULL;
     head->next->next=curr;
 
     
