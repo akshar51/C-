@@ -5,17 +5,21 @@ class Node{
     public:
     int data;
     Node* next;
+
+    
 };
 
 int main(){
+    Node *ptr=NULL;
+    
 
-    Node *head=NULL;
-    head=new Node();
+
+    Node *head=new Node();
     head->data=25;
     head->next=NULL;
-    Node* ptr;
     ptr=head;
-
+   
+  
     Node *curr;
     curr=new Node();
     head->data=50;
@@ -27,8 +31,10 @@ int main(){
     head->next=NULL;
     head->next->next=curr;
 
+    
     while(ptr!=NULL){
         cout<<"Data is : "<<ptr->data<<" "<<endl;
+        ptr=ptr->next;
     }
     
 }
