@@ -12,8 +12,6 @@ class Node{
 int main(){
     Node *ptr=NULL;
     
-
-
     Node *head=new Node();
     head->data=25;
     head->next=NULL;
