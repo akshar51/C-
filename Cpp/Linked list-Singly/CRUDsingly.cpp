@@ -24,15 +24,41 @@ class linkedlist{
 
     void addAtbegin(int ele){
         node* newnode=new node(ele);
-        newnode->next=head;
+        newnode->next=this->head;
+        this->head=newnode;
+        this->count++;
     }
 
-    void addAtend(){
-
+    void addAtend(int ele){
+        node* newnode= new node(ele);
+        if(this->head==NULL){
+            this->head=newnode;
+        }
+        else{
+            node* ptr=this->head;
+            while(ptr->next!=NULL){
+                ptr=ptr->next;
+            }
+            ptr->next=newnode;
+            this->count++;
+        }
     }
 
-    void addAtposition(){
-
+    void addAtposition(int ele,int position){
+        node* newnode= new node(ele);
+        if(position==0){
+            newnode->next=NULL;
+            this->head=newnode;
+        }
+        else{
+            node* ptr=this->head;
+            for(int i=1;i<position;i++){
+                ptr=ptr->next;
+            }
+            newnode->next=ptr->next;
+            ptr->next=newnode;
+            this->count++;
+        }
     }
 
     void show(){
