@@ -62,11 +62,63 @@ class linkedlist{
     }
 
     void show(){
-
+        node* ptr=head;
+        while(ptr!=NULL){
+            cout<<ptr->data<<" ";
+            ptr=ptr->next;
+        }
     }
 };
 
 int main(){
     linkedlist a;
+    int choice,ele,pos;
+
+    do{
+        cout<<"Press 1 for adding a node at beginning."<<endl;
+        cout<<"Press 2 for adding a node at end."<<endl;
+        cout<<"Press 3 for adding a node at particular position."<<endl;
+        cout<<"Press 4 for display element."<<endl;
+        cout<<"Press 0 for exit."<<endl;
+
+        cout<<"Enter your choice : ";
+        cin>>choice;
+
+        switch(choice){
+            case 1:
+            cout<<"Enter your element : ";
+            cin>>ele;
+            a.addAtbegin(ele);
+            cout<<"Element added at beginning successfully..."<<endl;
+            break;
+
+            case 2:
+            cout<<"Enter your element : ";
+            cin>>ele;
+            a.addAtend(ele);
+            cout<<"Element added at end successfully..."<<endl;
+            break;
+
+            case 3:
+            cout<<"Enter your element : ";
+            cin>>ele;
+            cout<<"Enter your position : ";
+            cin>>pos;
+            a.addAtposition(ele,pos);
+            cout<<"Element added at position successfully..."<<endl;
+            break;
+
+            case 4:
+            a.show();
+            break;
+
+            case 0:
+            break;
+
+            default:
+            cout<<"Enter valid choice....."<<endl;
+            break;
+        }
+    }while(choice!=0);
 
 }
