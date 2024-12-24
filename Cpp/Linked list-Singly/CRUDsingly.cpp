@@ -13,15 +13,18 @@ class node{
 };
 
 class linkedlist{
+    public:
     node *head;
     int count;
-    linkedlist(int data){
+
+    linkedlist(){
         this->head=NULL;
         this->count=0;
     }
 
-    void addAtbegin(){
-
+    void addAtbegin(int ele){
+        node* newnode=new node(ele);
+        newnode->next=head;
     }
 
     void addAtend(){
