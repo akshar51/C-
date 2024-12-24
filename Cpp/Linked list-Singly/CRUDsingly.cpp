@@ -52,7 +52,7 @@ class linkedlist{
         }
         else{
             node* ptr=this->head;
-            for(int i=1;i<position;i++){
+            for(int i=1;i<position-1;i++){
                 ptr=ptr->next;
             }
             newnode->next=ptr->next;
@@ -88,15 +88,17 @@ int main(){
             case 1:
             cout<<"Enter your element : ";
             cin>>ele;
+            cout<<endl;
             a.addAtbegin(ele);
-            cout<<"Element added at beginning successfully..."<<endl;
+            cout<<"Element added at beginning successfully..."<<endl<<endl;
             break;
 
             case 2:
             cout<<"Enter your element : ";
             cin>>ele;
+            cout<<endl;
             a.addAtend(ele);
-            cout<<"Element added at end successfully..."<<endl;
+            cout<<"Element added at end successfully..."<<endl<<endl;
             break;
 
             case 3:
@@ -104,19 +106,21 @@ int main(){
             cin>>ele;
             cout<<"Enter your position : ";
             cin>>pos;
+            cout<<endl;
             a.addAtposition(ele,pos);
-            cout<<"Element added at position successfully..."<<endl;
+            cout<<"Element added at position successfully..."<<endl<<endl;
             break;
 
             case 4:
             a.show();
+            cout<<endl;
             break;
 
             case 0:
             break;
 
             default:
-            cout<<"Enter valid choice....."<<endl;
+            cout<<"Enter valid choice....."<<endl<<endl;
             break;
         }
     }while(choice!=0);
