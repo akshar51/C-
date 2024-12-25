@@ -36,7 +36,7 @@ int main(){
     City c3=c2;
     City c4(c3);
     
-
+    cout<<c1.id<<endl;
     cout<<c4.id<<endl;
     cout<<c2.id<<endl;
 }
