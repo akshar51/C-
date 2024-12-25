@@ -61,6 +61,39 @@ class linkedlist{
         }
     }
 
+    void update(int ele,int pos){
+        if(pos<0 || pos>this->count){
+            cout<<"Invalid position..";
+            return;
+        }
+        else{
+        node* ptr=this->head;
+        for(int i=0;i<pos-1;i++){
+            ptr=ptr->next;
+        }
+        ptr->data=ele;
+        }
+    }
+
+    void deletebegin(){
+        if(this->head==NULL || this->count==0){
+            cout<<"List is empty..";
+            return;
+        }
+        node* ptr=this->head;
+        this->head=head->next;
+        delete ptr;
+        ptr=NULL;
+    }
+
+     void deleteend(){
+        if(this->head==NULL || this->count==0){
+            cout<<"List is empty..";
+            return;
+        }
+        
+    }
+
     void show(){
         node* ptr=head;
         while(ptr!=NULL){
@@ -79,8 +112,9 @@ int main(){
         cout<<"Press 2 for adding a node at end."<<endl;
         cout<<"Press 3 for adding a node at particular position."<<endl;
         cout<<"Press 4 for display element."<<endl;
+        cout<<"Press 5 for update an element."<<endl;
+        cout<<"Press 6 for delete an element at beginning."<<endl;
         cout<<"Press 0 for exit."<<endl;
-
         cout<<"Enter your choice : ";
         cin>>choice;
 
@@ -114,6 +148,21 @@ int main(){
             case 4:
             a.show();
             cout<<endl;
+            break;
+
+            case 5:
+            cout<<"Enter your element : ";
+            cin>>ele;
+            cout<<"Enter your position : ";
+            cin>>pos;
+            cout<<endl;
+            a.update(ele,pos);
+            cout<<"Element updated successfully..."<<endl<<endl;
+            break;
+
+            case 6:
+            a.deletebegin();
+            cout<<"Element deleted at begin is successfull.."<<endl<<endl;
             break;
 
             case 0:
