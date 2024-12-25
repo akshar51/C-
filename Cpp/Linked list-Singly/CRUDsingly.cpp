@@ -21,6 +21,7 @@ class linkedlist{
         this->head=NULL;
         this->count=0;
     }
+    // -------------ADD---------------
 
     void addAtbegin(int ele){
         node* newnode=new node(ele);
@@ -61,6 +62,7 @@ class linkedlist{
         }
     }
 
+    // ------------------UPDATE---------------
     void update(int ele,int pos){
         if(pos<0 || pos>this->count){
             cout<<"Invalid position..";
@@ -75,6 +77,8 @@ class linkedlist{
         }
     }
 
+
+    // ---------------DELETE--------------------
     void deletebegin(){
         if(this->head==NULL || this->count==0){
             cout<<"List is empty..";
@@ -103,6 +107,8 @@ class linkedlist{
         }
     }
 
+
+    // ----------------DISPLAY-------------
     void show(){
         node* ptr=head;
         while(ptr!=NULL){
