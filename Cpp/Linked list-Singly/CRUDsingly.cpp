@@ -91,7 +91,16 @@ class linkedlist{
             cout<<"List is empty..";
             return;
         }
-        
+        else{
+        node* ptr=this->head;
+        while(ptr->next->next!=NULL){
+            ptr=ptr->next;
+        }
+        delete ptr->next;
+        ptr->next=NULL;
+        delete ptr;
+        ptr=NULL;
+        }
     }
 
     void show(){
@@ -114,6 +123,7 @@ int main(){
         cout<<"Press 4 for display element."<<endl;
         cout<<"Press 5 for update an element."<<endl;
         cout<<"Press 6 for delete an element at beginning."<<endl;
+        cout<<"Press 7 for delete an element at end."<<endl;
         cout<<"Press 0 for exit."<<endl;
         cout<<"Enter your choice : ";
         cin>>choice;
@@ -163,6 +173,11 @@ int main(){
             case 6:
             a.deletebegin();
             cout<<"Element deleted at begin is successfull.."<<endl<<endl;
+            break;
+
+            case 7:
+            a.deleteend();
+            cout<<"Element deleted at end is successfull.."<<endl<<endl;
             break;
 
             case 0:
