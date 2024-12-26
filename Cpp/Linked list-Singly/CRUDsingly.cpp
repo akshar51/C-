@@ -107,6 +107,28 @@ class linkedlist{
         }
     }
 
+    void deleteAtpos(int pos){
+        if(this->head==NULL || this->count==0){
+            cout<<"List is empty..";
+        }
+        else{
+            node* prev=this->head;
+            node* curr=this->head;
+            for(int i=0;i<pos;i++){
+                curr=curr->next;
+            }
+            for(int i=0;i<pos-1;i++){
+                prev=prev->next;
+            }
+            prev->next=curr->next;
+            delete curr;
+            curr=NULL;
+            delete prev;
+            prev=NULL;
+            this->count--;
+        }
+    }
+
 
     // ----------------DISPLAY-------------
     void show(){
@@ -130,6 +152,7 @@ int main(){
         cout<<"Press 5 for update an element."<<endl;
         cout<<"Press 6 for delete an element at beginning."<<endl;
         cout<<"Press 7 for delete an element at end."<<endl;
+        cout<<"Press 8 for delete an element at particular position."<<endl;
         cout<<"Press 0 for exit."<<endl;
         cout<<"Enter your choice : ";
         cin>>choice;
@@ -184,6 +207,14 @@ int main(){
             case 7:
             a.deleteend();
             cout<<"Element deleted at end is successfull.."<<endl<<endl;
+            break;
+
+            case 8:
+            cout<<"Enter your position : ";
+            cin>>pos;
+            cout<<endl;
+            a.deleteAtpos(pos);
+            cout<<"Element deleted at position is successfull.."<<endl<<endl;
             break;
 
             case 0:
