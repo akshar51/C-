@@ -3,6 +3,7 @@ using namespace std;
 
 
 // OPERATION OF STACK
+
 class Stack{
     private:
     int* arr;
