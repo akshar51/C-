@@ -2,6 +2,9 @@
 using namespace std;
 
 int main(){
+
+    // DIGIT COUNTER IN NUMBER
+    
     int num,i,count=0;
     cout<<"Enter your number of digit count : ";
     cin>>num;

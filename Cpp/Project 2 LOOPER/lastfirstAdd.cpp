@@ -2,6 +2,9 @@
 using namespace std;
 
 int main(){
+
+    // SUM OF FIRST AND LAST DIGIT
+    
     int num,lastdigit,firstdigit,result;
     cout<<"Enter your digit for addition of first and last digit : ";
     cin>>num;
