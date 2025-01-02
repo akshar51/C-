@@ -137,26 +137,32 @@ int main(){
 
             case 3:
             q.getfront();
+            cout<<endl;
             break;
 
             case 4:
             q.getrear();
+            cout<<endl;
             break;
 
             case 5:
             q.display();
+            cout<<endl;
             break;
 
             case 6:
             q.isEmpty();
+            cout<<endl;
             break;
 
             case 7:
             q.isFull();
+            cout<<endl;
             break;
 
             case 8:
             q.size();
+            cout<<endl;
             break;
 
             case 0:
