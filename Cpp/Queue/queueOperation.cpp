@@ -37,7 +37,7 @@ class Queue{
         if(front==-1 && rear==-1){
             cout<<"Queue underflow.."<<endl;
         }
-        else if (front==0 && rear==0){
+        else if (front==rear){
             front=rear=-1;
             count--;
         }
@@ -54,15 +54,17 @@ class Queue{
         else{
             cout<<ar[front];
         }
+        cout<<endl;
     }
 
     void getrear(){
-        if(front==-1){
+        if(rear==-1){
             cout<<"Queue is empty.."<<endl;
         }
         else{
             cout<<ar[rear];
         }
+        cout<<endl;
     }
 
     void display(){
@@ -116,7 +118,7 @@ int main(){
         cout<<"Press 8 for size operation"<<endl;
         cout<<"Press 0 for exit"<<endl<<endl;
 
-        cout<<"Enter your choice";
+        cout<<"Enter your choice : ";
         cin>>choice;
 
         switch(choice){
