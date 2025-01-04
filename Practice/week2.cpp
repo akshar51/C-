@@ -93,7 +93,7 @@ int main(){
         cout<<"Press 4 for REAR "<<endl;
         cout<<"Press 5 for SIZE "<<endl;
         cout<<"Press 6 for DISPLAY "<<endl;
-        cout<<"Press 5 for EXIT "<<endl<<endl;
+        cout<<"Press 0 for EXIT "<<endl<<endl;
 
         cout<<"Enter your choice : ";
         cin>>choice;
