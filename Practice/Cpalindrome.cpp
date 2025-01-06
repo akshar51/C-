@@ -3,6 +3,9 @@
 using namespace std;
 
 int main(){
+
+    // PALINDROME
+    
     int count=0;
     string str;
     cout<<"Enter string : ";
