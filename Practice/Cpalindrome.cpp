@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<vector>
 using namespace std;
 
 int main(){
@@ -24,6 +25,8 @@ int main(){
     else{
         cout<<"String is palindrome...";
     }
+
+    
 }
 
 

@@ -4,25 +4,25 @@ using namespace std;
 
 int main(){
     // REVERSE OF VECTOR
-    // int size;
-    // cout<<"Enter vector size : ";
-    // cin>>size;
-    // vector<int> v(size);
-    // vector<int> ans(size);
-    // for(int i=0;i<v.size();i++){
-    //     cout<<"v["<<i<<"] = ";
-    //     cin>>v[i];
-    // }
+    int size;
+    cout<<"Enter vector size : ";
+    cin>>size;
+    vector<int> v(size);
+    vector<int> ans(size);
+    for(int i=0;i<v.size();i++){
+        cout<<"v["<<i<<"] = ";
+        cin>>v[i];
+    }
 
-    // for(int i=0;i<v.size();i++){
-    //     ans[i]=v[size-1];
-    //     size--;
-    // }
+    for(int i=0;i<v.size();i++){
+        ans[i]=v[size-1];
+        size--;
+    }
 
-    // cout<<"Reverse of vector is : ";
-    // for(int i=0;i<ans.size();i++){
-    //     cout<<ans[i]<<" ";
-    // }
+    cout<<"Reverse of vector is : ";
+    for(int i=0;i<ans.size();i++){
+        cout<<ans[i]<<" ";
+    }
 
     //------------ PRINT SMALLEST VALUE FROM LEFT AND RIGHT -----------------
 
@@ -47,16 +47,16 @@ int main(){
     // }
 
     //------------------------ NxN MATRIX USING MATRIX -----------------
-    int n;
-    cout<<"Enter value : ";
-    cin>>n;
-    vector<int> v(n,n);
-    vector<vector<int>> v1(n,v);
-    for(vector<int> el:v1){
-        for(int b:el){
-            cout<<b<<" ";
-        }
-        cout<<endl;
-    }
+    // int n;
+    // cout<<"Enter value : ";
+    // cin>>n;
+    // vector<int> v(n,n);
+    // vector<vector<int>> v1(n,v);
+    // for(vector<int> el:v1){
+    //     for(int b:el){
+    //         cout<<b<<" ";
+    //     }
+    //     cout<<endl;
+    // }
    
 }
