@@ -8,13 +8,11 @@ int main(){
     cout<<"Enter string : ";
     cin>>str;
 
-    for(int i=0;i<str.size();i++){
-        for(int j=str.size()-1;j>=0;j--){
-            if(str[i]!=str[j]){
+    for(int i=0;i<str.size()/2;i++){
+            if(str[i]!=str[str.size()-1-i]){
                 count=1;
                 break;
             }
-        }
     }
 
     if(count==1){
