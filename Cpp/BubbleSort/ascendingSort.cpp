@@ -3,7 +3,6 @@ using namespace std;
 
 void bubble(int a[],int n){
     int pass=1;
-
     while(pass<=n-1){
         for(int j=0;j<n-pass;j++){
             if(a[j]>a[j+1]){
@@ -11,8 +10,8 @@ void bubble(int a[],int n){
                 a[j]=a[j+1];
                 a[j+1]=temp;
             }
-            pass++;
         }
+        pass++;
     }
 }
 
@@ -38,6 +37,9 @@ int main(){
     cout<<"Array after bubble sort : ";
     bubble(a,n);
     print(a,n);
+
+    return 0;
+    
     
 
 
