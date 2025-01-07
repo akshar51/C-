@@ -1,6 +1,9 @@
 #include<iostream>
 using namespace std;
 
+
+// -------- ASCENDING BUBBLE SORT------------
+
 void bubble(int a[],int n){
     int pass=1;
     while(pass<=n-1){
