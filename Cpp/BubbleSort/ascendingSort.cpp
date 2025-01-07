@@ -41,9 +41,9 @@ int main(){
     bubble(a,n);
     print(a,n);
 
+   
+    
+    
+
     return 0;
-    
-    
-
-
 }
