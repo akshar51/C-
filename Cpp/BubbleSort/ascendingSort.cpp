@@ -5,7 +5,14 @@ void bubble(int a[],int n){
     int pass=1;
 
     while(pass<=n-1){
-
+        for(int j=0;j<n-pass;j++){
+            if(a[j]>a[j+1]){
+                int temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
+            }
+            pass++;
+        }
     }
 }
 
@@ -24,6 +31,14 @@ int main(){
         cout<<"a["<<i<<"] = ";
         cin>>a[i];
     }
+
+    cout<<"Array element is : ";
+    print(a,n);
+    cout<<endl;
+    cout<<"Array after bubble sort : ";
+    bubble(a,n);
+    print(a,n);
+    
 
 
 }
