@@ -9,7 +9,9 @@ void print(int a[],int n){
     cout<<endl;
 }
 
-
+void insertionSort(int a[],int n){
+    
+}
 
 int main(){
     int n;
@@ -21,7 +23,7 @@ int main(){
         cin>>a[i];
     }
     cout<<endl;
-
+    print(a,n);
     insertionSort(a,n);
     print(a,n);
 }
