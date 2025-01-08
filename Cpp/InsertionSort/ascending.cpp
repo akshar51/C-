@@ -2,7 +2,7 @@
 using namespace std;
 
 void print(int a[],int n){
-    cout<<"Array is : ";
+    
     for(int i=0;i<n;i++){
         cout<<a[i]<<" ";
     }
@@ -10,7 +10,15 @@ void print(int a[],int n){
 }
 
 void insertionSort(int a[],int n){
-    
+    for(int i=1;i<n;i++){
+        int key=a[i];
+        int j=i-1;
+        while(j>=0 && key<a[j]){
+            a[j+1]=a[j];
+            j--;
+        }
+        a[j+1]=key;
+    }
 }
 
 int main(){
@@ -23,7 +31,9 @@ int main(){
         cin>>a[i];
     }
     cout<<endl;
+    cout<<"Array is : ";
     print(a,n);
     insertionSort(a,n);
+    cout<<"Array after sorted : ";
     print(a,n);
 }
