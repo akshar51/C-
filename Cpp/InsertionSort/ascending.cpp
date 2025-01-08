@@ -31,6 +31,7 @@ void print(int a[],int n){
 }
 
 void insertionSort(int a[],int n){
+    // UNSORTED OUTER LOOP
     for(int i=1;i<n;i++){
         int key=a[i];
         int j=i-1;
