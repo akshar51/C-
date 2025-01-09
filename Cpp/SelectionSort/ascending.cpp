@@ -11,7 +11,9 @@ class sort{
                     min_index=j;
                 }
             }
-            int temp=
+            int temp=a[min_index];
+            a[min_index]=a[i];
+            a[i]=temp;
         }
     }
 
