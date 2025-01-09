@@ -35,7 +35,9 @@ int main(){
         cout<<"a["<<i<<"] = ";
         cin>>ar[i];
     }
+    cout<<"Array is : ";
     a.print(ar,n);
+    cout<<"Sorted array is : ";
     a.selectionsort(ar,n);
     a.print(ar,n);
 
