@@ -8,11 +8,11 @@ int main(){
         cout<<"A";
     }
     else{
-            if (mark>80){
-             if(mark>85){
+    if (mark>80){
+            if(mark>85){
                 cout<<"A -";
                 }
-                else{
+            else{
                 cout<<"B+";
                 }
             }
