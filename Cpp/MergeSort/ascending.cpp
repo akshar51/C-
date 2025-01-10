@@ -20,10 +20,12 @@ void merge(vector<int>&a,int low,int mid,int high){
             right++;
         }
     }
+
     while(left<=mid){
         temp.push_back(a[left]);
         left++;
     }
+
     while(right<=high){
         temp.push_back(a[right]);
         right++;
@@ -32,14 +34,17 @@ void merge(vector<int>&a,int low,int mid,int high){
     for(int i=low;i<=high;i++){
         a[i]=temp[i-low];
     }
+
 }
 
 
 // DIVIDE ARRAY INTO 2 PART
 void mergesort(vector<int>&a,int low,int high){
+
     if(low>=high){
         return;
     }
+
     int mid=(low+high)/2;
 
     // LEFT ARRAY
@@ -53,6 +58,7 @@ void mergesort(vector<int>&a,int low,int high){
 }
 
 void print(vector<int>&a,int n){
+
     for(int i=0;i<a.size();i++){
         cout<<a[i]<<" ";
     }
@@ -63,9 +69,12 @@ void print(vector<int>&a,int n){
 
 
 int main(){
+
     int n;
+    
     cout<<"Enter array size : ";
     cin>>n;
+
     vector <int> a;
     for(int i=0;i<n;i++){
         int element;
@@ -73,6 +82,7 @@ int main(){
         cin>>element;
         a.push_back(element);
     }
+
     cout<<"Array is : ";
     print(a,n);
     mergesort(a,0,n-1);
