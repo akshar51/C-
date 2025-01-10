@@ -3,7 +3,6 @@
 using namespace std;
 
 
-
 // MERGE 2 HALVES OF ARRAY
 void merge(vector<int>&a,int low,int mid,int high){
 
