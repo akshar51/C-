@@ -15,11 +15,11 @@ using namespace std;
 // INSERTION SORT
 void insertionSort(int ar[],int n){
 
-    for(int i=1;i<n-1;i++){
-        int key=ar[i];//10
-        int j=i-1;//20
+    for(int i=1;i<n;i++){
+        int key=ar[i];
+        int j=i-1;
         while(j>=0 && key<ar[j]){
-            ar[j]=ar[j+1];
+            ar[j+1]=ar[j];
             j--;
         }
         ar[j+1]=key;
