@@ -56,7 +56,7 @@ using namespace std;
 
 
 void merge(int ar[],int start,int mid,int end){
-    vector<int> temp;
+    vector<int> temp(end-start+1);
     int left=start;
     int right=mid+1;
     int index=0;
@@ -73,10 +73,20 @@ void merge(int ar[],int start,int mid,int end){
         }
     }
     while(left<=mid){
-        temp[index=ar[left];
+        temp[index]=ar[left];
+        left++;
+        index++;
     }
     while(right<=end){
         temp[index]=ar[right];
+        right++;
+        index++;
+    }
+    index=0;
+    while(start<=end){
+        ar[start]=temp[index];
+        start++;
+        index++;
     }
 }
 
@@ -84,7 +94,7 @@ void mergesort(int ar[],int start,int end){
     if(start==end){
         return;
     }
-    int mid=start+end/2;
+    int mid=start+(end-start)/2;
     mergesort(ar,start,mid);
     mergesort(ar,mid+1,end);
     merge(ar,start,mid,end);
@@ -99,7 +109,9 @@ void print(int ar[],int size){
 
 int main(){
     int ar[]={34,15,17,5,1,3};
-    mergesort(ar,0,ar.size()-1);
+    int size=sizeof(ar)/sizeof(ar[0]);
+    mergesort(ar,0,size-1);
+    print(ar,size);
     return 0;
 
 }
