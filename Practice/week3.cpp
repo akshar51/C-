@@ -108,7 +108,7 @@ void print(int ar[],int size){
 }
 
 int main(){
-    int ar[]={34,15,17,5,1,3};
+    int ar[]={5,2,8,5,1,2};
     int size=sizeof(ar)/sizeof(ar[0]);
     mergesort(ar,0,size-1);
     print(ar,size);
