@@ -28,6 +28,18 @@ using namespace std;
 //     }
 // }
 
+void selectionsort(int ar[],int size){
+    for(int i=0;i<size-1;i++){
+        int smallest=i;
+        for(int j=i+1;j<size;j++){
+            if(ar[j]<ar[smallest]){
+                smallest=j;
+            }
+        }
+        swap(ar[i],ar[smallest]);
+    }
+}
+
 // void print(int ar[],int n){
 //     for(int i=0;i<n;i++){
 //         cout<<ar[i]<<" ";
@@ -55,50 +67,52 @@ using namespace std;
 // }
 
 
-void merge(int ar[],int start,int mid,int end){
-    vector<int> temp(end-start+1);
-    int left=start;
-    int right=mid+1;
-    int index=0;
-    while(left<=mid && right<=end){
-        if(ar[left]<=ar[right]){
-            temp[index]=ar[left];
-            left++;
-            index++;
-        }
-        else{
-            temp[index]=ar[right];
-            right++;
-            index++;
-        }
-    }
-    while(left<=mid){
-        temp[index]=ar[left];
-        left++;
-        index++;
-    }
-    while(right<=end){
-        temp[index]=ar[right];
-        right++;
-        index++;
-    }
-    index=0;
-    while(start<=end){
-        ar[start]=temp[index];
-        start++;
-        index++;
-    }
-}
 
-void mergesort(int ar[],int start,int end){
-    if(start==end){
-        return;
-    }
-    int mid=start+(end-start)/2;
-    mergesort(ar,start,mid);
-    mergesort(ar,mid+1,end);
-    merge(ar,start,mid,end);
-}
+
+// void merge(int ar[],int start,int mid,int end){
+//     vector<int> temp(end-start+1);
+//     int left=start;
+//     int right=mid+1;
+//     int index=0;
+//     while(left<=mid && right<=end){
+//         if(ar[left]<=ar[right]){
+//             temp[index]=ar[left];
+//             left++;
+//             index++;
+//         }
+//         else{
+//             temp[index]=ar[right];
+//             right++;
+//             index++;
+//         }
+//     }
+//     while(left<=mid){
+//         temp[index]=ar[left];
+//         left++;
+//         index++;
+//     }
+//     while(right<=end){
+//         temp[index]=ar[right];
+//         right++;
+//         index++;
+//     }
+//     index=0;
+//     while(start<=end){
+//         ar[start]=temp[index];
+//         start++;
+//         index++;
+//     }
+// }
+
+// void mergesort(int ar[],int start,int end){
+//     if(start==end){
+//         return;
+//     }
+//     int mid=start+(end-start)/2;
+//     mergesort(ar,start,mid);
+//     mergesort(ar,mid+1,end);
+//     merge(ar,start,mid,end);
+// }
 
 void print(int ar[],int size){
     for(int i=0;i<size;i++){
@@ -110,7 +124,8 @@ void print(int ar[],int size){
 int main(){
     int ar[]={5,2,8,5,1,2};
     int size=sizeof(ar)/sizeof(ar[0]);
-    mergesort(ar,0,size-1);
+    // mergesort(ar,0,size-1);
+    selectionsort(ar,size);
     print(ar,size);
     return 0;
 
