@@ -17,7 +17,7 @@ int binary_search(int a[],int n,int st,int end,int target){
         return mid;
     }
     else if(target<a[mid]){
-        return binary_search(a,n,st,mid-1,target);
+        return binary_search(a,n,st,mid,target);
     }
     else{
         return binary_search(a,n,mid+1,end,target);
@@ -46,8 +46,9 @@ int main(){
         cout<<"Element not founded...."<<endl;
     }
     else{
-        cout<<"Element founded...."<<endl;
+        cout<<"Element founded at index : "<<founded<<endl;
     }
+    
 
 
     return 0;
