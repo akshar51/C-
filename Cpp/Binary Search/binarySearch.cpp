@@ -8,7 +8,20 @@ void print(int a[],int n){
     cout<<endl;
 }
 
-void binary_search(int a[],int n,int st,int end,int target){
+int binary_search(int a[],int n,int st,int end,int target){
+    if(st>end){
+        return -1;
+    }
+    int mid=st+end/2;
+    if(target==a[mid]){
+        return mid;
+    }
+    else if(target<a[mid]){
+        return binary_search(a,n,st,mid-1,target);
+    }
+    else{
+        return binary_search(a,n,mid+1,end,target);
+    }
 
 }
 
