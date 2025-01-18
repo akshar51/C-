@@ -24,6 +24,9 @@ class BankAccount{
         if(amount==0){
             cout<<"Not sufficient balance..."<<endl;
         }
+        else if(amount>this->balance){
+            cout<<"Not sufficient balance.."<<endl;
+        }
         else{
             this->balance=this->balance-amount;
             cout<<"Withdraw successfully..."<<endl;;
@@ -158,6 +161,7 @@ int main(){
             break;
 
             case 0:break;
+
             default:
             cout<<"Invalid choice....."<<endl;
 
