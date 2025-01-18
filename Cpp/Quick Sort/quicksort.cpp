@@ -31,5 +31,5 @@ int main(){
     for(int val : ar){
         cout<<val<<" ";
     }
-    endl;
+    cout<<endl;
 }
