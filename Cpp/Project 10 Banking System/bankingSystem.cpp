@@ -6,7 +6,7 @@ class BankAccount{
     protected:
     int accountNumber;
     string accountHolderName;
-    int balance;
+    double balance;
 
     public:
     BankAccount(){
@@ -42,13 +42,15 @@ class BankAccount{
 };
 
 class SavingAccount : public BankAccount{
-    int interestRate;
+    double interestRate;
+
     public:
     SavingAccount(){
         this->interestRate=5;
     }
     void calculateInterest(){
-        double interest=(this->balance * interestRate)/100;
+        double interest=(this->balance * this->interestRate) / 100;
+        this->balance+=interest;
         cout<<"Interest is : "<<interest<<endl;
     }
 };
@@ -66,14 +68,22 @@ class CheckingAccount : public BankAccount{
 
 class FixedDepositAccount : public BankAccount{
     int term;
-    int interestRate;
+    double interestRate;
+    double balance;
+
     public:
     FixedDepositAccount(){
         this->term=12;
         this->interestRate=7;
+        this->balance=0;
+    }
+    void deposit(double amount,int month){
+        this->balance+=amount;
+        this->term=month;
+        cout<<"Fixed deposit of "<<amount<<" made for "<<term<<" month"<<endl;
     }
     void calculateInterest(){
-        int interest=(this->balance*interestRate*term)/(100*12);
+        double interest=(this->balance * interestRate * term)/(100*12);
         cout<<term<<" month interest is : "<<interest<<endl;
     }
 };
@@ -84,13 +94,17 @@ class FixedDepositAccount : public BankAccount{
 
 int main(){
     int choice;
-    BankAccount a;
+    SavingAccount b;
+    FixedDepositAccount c;
     
     do{
         cout<<"Press 1 for deposit "<<endl;
         cout<<"Press 2 for withdraw "<<endl;
         cout<<"Press 3 for balance "<<endl;
         cout<<"Press 4 for account info "<<endl;
+        cout<<"Press 5 for saving account interest "<<endl;
+        cout<<"Press 6 for deposit to fixed deposit "<<endl;
+        cout<<"Press 7 for fixed deposit interest "<<endl;
         cout<<"Press 0 for exit "<<endl;
 
         cout<<"Enter your choice : ";
@@ -102,7 +116,7 @@ int main(){
             int amount;
             cout<<"Enter deposit amount : ";
             cin>>amount;
-            a.deposit(amount);
+            b.deposit(amount);
             cout<<endl;
             break;
             
@@ -110,16 +124,37 @@ int main(){
             int money;
             cout<<"Enter withdraw amount : ";
             cin>>money;
-            a.withdraw(money);
+            b.withdraw(money);
             cout<<endl;
             break;
             
             case 3:
-            a.getbalance();
+            b.getbalance();
             break;
             
             case 4:
-            a.displayAccountInfo();
+            b.displayAccountInfo();
+            break;
+
+            case 5:
+            b.calculateInterest();
+            cout<<endl;
+            break;
+
+            case 6:
+            double amounts;
+            int term;
+            cout<<"Enter amount for fixed deposit : ";
+            cin>>amounts;
+            cout<<"Enter the term of fix : ";
+            cin>>term;
+            c.deposit(amounts,term);
+            cout<<endl;
+            break;
+
+            case 7:
+            c.calculateInterest();
+            cout<<endl;
             break;
 
             case 0:break;
