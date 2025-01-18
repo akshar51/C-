@@ -3,6 +3,7 @@
 using namespace std;
 
 class BankAccount{
+    protected:
     int accountNumber;
     string accountHolderName;
     int balance;
@@ -14,7 +15,6 @@ class BankAccount{
         this->balance=0;
     }
 
-    public:
     void deposit(double amount){
         this->balance=this->balance+amount;
         cout<<"Deposit successfully..."<<endl;
@@ -31,34 +31,50 @@ class BankAccount{
     }
 
     void getbalance(){
-        cout<<"Your balance is : "<<this->balance<<endl;
+        cout<<"Your balance is : "<<this->balance<<endl<<endl;
     }
 
     void displayAccountInfo(){
         cout<<"Account name is : "<<this->accountHolderName<<endl;
         cout<<"Account number is : "<<this->accountNumber<<endl;
-        cout<<"Account balance is : "<<this->balance<<endl;
+        cout<<"Account balance is : "<<this->balance<<endl<<endl;
     }
 };
 
-class SavingAccount:public BankAccount{
+class SavingAccount : public BankAccount{
     int interestRate;
+    public:
+    SavingAccount(){
+        this->interestRate=5;
+    }
     void calculateInterest(){
-        
+        double interest=(this->balance * interestRate)/100;
+        cout<<"Interest is : "<<interest<<endl;
     }
 };
 
-class CheckingAccount:public BankAccount{
+class CheckingAccount : public BankAccount{
     int overdraftLimit;
+    public:
+    CheckingAccount(){
+        this->overdraftLimit=500;
+    }
     void checkOverdraft(){
-
+        cout<<"Over draft limit is : "<<this->overdraftLimit<<endl;
     }
 };
 
-class FixedDepositAccount:public BankAccount{
+class FixedDepositAccount : public BankAccount{
     int term;
+    int interestRate;
+    public:
+    FixedDepositAccount(){
+        this->term=12;
+        this->interestRate=7;
+    }
     void calculateInterest(){
-
+        int interest=(this->balance*interestRate*term)/(100*12);
+        cout<<term<<" month interest is : "<<interest<<endl;
     }
 };
 
@@ -69,6 +85,7 @@ class FixedDepositAccount:public BankAccount{
 int main(){
     int choice;
     BankAccount a;
+    
     do{
         cout<<"Press 1 for deposit "<<endl;
         cout<<"Press 2 for withdraw "<<endl;
@@ -100,11 +117,16 @@ int main(){
             case 3:
             a.getbalance();
             break;
-            case 4:break;
+            
+            case 4:
+            a.displayAccountInfo();
+            break;
+
             case 0:break;
             default:
             cout<<"Invalid choice....."<<endl;
 
         }
     }while(choice!=0);
+    return 0;
 }
