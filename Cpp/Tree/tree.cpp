@@ -21,10 +21,11 @@ int main(){
     node1->left=nullptr;
     node1->right=nullptr;
      
-    node1->data='C';
-    node1->left=nullptr;
-    node1->right=nullptr;
+    node2->data='C';
+    node2->left=nullptr;
+    node2->right=nullptr;
      
+    cout<<root->left<<"-"<<root->data<<"-"<<root->right<<endl;
 
-     
+
 }
