@@ -29,5 +29,5 @@ int main(){
     cout<<node1->left<<"-"<<node1->data<<"-"<<node1->right<<endl;
     cout<<node2->left<<"-"<<node2->data<<"-"<<node2->right<<endl;
 
-
+    return 0;
 }
