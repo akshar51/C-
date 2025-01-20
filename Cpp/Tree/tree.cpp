@@ -26,6 +26,8 @@ int main(){
     node2->right=nullptr;
      
     cout<<root->left<<"-"<<root->data<<"-"<<root->right<<endl;
+    cout<<node1->left<<"-"<<node1->data<<"-"<<node1->right<<endl;
+    cout<<node2->left<<"-"<<node2->data<<"-"<<node2->right<<endl;
 
 
 }
