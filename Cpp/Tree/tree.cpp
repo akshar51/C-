@@ -9,6 +9,7 @@ class Node{
 };
 
 int main(){
+    
     Node* root=new Node;
     Node* node1=new Node;
     Node* node2=new Node;
@@ -28,6 +29,8 @@ int main(){
     cout<<root->left<<"-"<<root->data<<"-"<<root->right<<endl;
     cout<<node1->left<<"-"<<node1->data<<"-"<<node1->right<<endl;
     cout<<node2->left<<"-"<<node2->data<<"-"<<node2->right<<endl;
+
+    
 
     return 0;
 }
